@@ -16,7 +16,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.ui.alpha" },
     { import = "lazyvim.plugins.extras.coding.copilot" },
-    -- { import = "lazyvim.plugins.extras.util.project" },
+    { import = "lazyvim.plugins.extras.util.project" },
     -- { import = "lazyvim.plugins.extras.test.core" },
     { import = "plugins" },
   },
