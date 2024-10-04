@@ -1,13 +1,11 @@
+-- This plugin will be used to manage the project's files
 return {
   "nvim-telescope/telescope-file-browser.nvim",
   keys = {
     {
-      "<leader>sB",
+      "<leader>fM",
       ":Telescope file_browser path=%:p:h=%:p:h<cr>",
-      desc = "Browse Files",
+      desc = "Manage files",
     },
   },
-  config = function()
-    require("telescope").load_extension("file_browser")
-  end,
 }

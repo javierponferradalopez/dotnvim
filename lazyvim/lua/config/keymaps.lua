@@ -14,4 +14,9 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- copy path current file
-map("n", "<leader>y", "\":let @+=expand('%:p')<CR>\"", { expr = true, silent = true })
+map(
+  "n",
+  "<leader>y",
+  "\":let @+=expand('%:p')<CR>\"",
+  { expr = true, silent = true, desc = "Copy path to current file" }
+)
