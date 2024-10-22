@@ -18,7 +18,18 @@ return {
     { "<leader>ff", "<cmd>Telescope git_files<cr>", desc = "Find files (Root dir)" },
   },
   config = function(opts)
-    require("telescope").setup(opts)
+    require("telescope").setup({
+      defaults = {
+        layout_strategy = "vertical", -- Cambia el diseño a vertical
+        layout_config = {
+          height = 0.9, -- Ajusta la altura de la ventana
+          width = 0.8, -- Ajusta el ancho de la ventana
+          preview_height = 0.5, -- Tamaño del previsualizador
+          preview_cutoff = 1, -- Forza la aparición del previsualizador aunque haya muchas referencias
+        },
+        scroll_strategy = "cycle",
+      },
+    })
     require("telescope").load_extension("file_browser")
   end,
 }
