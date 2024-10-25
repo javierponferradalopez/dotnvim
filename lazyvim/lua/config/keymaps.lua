@@ -20,3 +20,6 @@ map(
   "\":let @+=expand('%:p')<CR>\"",
   { expr = true, silent = true, desc = "Copy path to current file" }
 )
+
+-- open a terminal
+map("n", "<leader>t", ":term<CR>", { desc = "Open a new terminal" })
