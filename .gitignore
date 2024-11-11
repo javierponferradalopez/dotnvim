@@ -1,13 +1,9 @@
-# neovim
-neovim/plugged/*
-neovim/autoload/plug.vim
-
 # lazyvim
-lazyvim/tt.*
-lazyvim/.tests
-lazyvim/doc/tags
-lazyvim/debug
-lazyvim/.repro
-lazyvim/foo.*
-lazyvim/*.log
-lazyvim/data
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
