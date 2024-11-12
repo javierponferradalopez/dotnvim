@@ -41,23 +41,21 @@ return {
         lsp_format = "fallback",
         stop_after_first = true,
       },
-      formatters_by_ft = {
-        javascript = { "eslint", "biome" },
-        typescript = { "eslint", "biome" },
-      },
       formatters = {
         biome = {
           command = "biome",
-          args = { "check", "--write", "$FILENAME" },
-          ignore_errors = false,
-        },
-        eslint = {
-          command = "eslint",
-          args = { "--fix", "--stdin", "--stdin-filename", "$FILENAME" },
-          ignore_errors = false,
-        },
+          args = { "check", "--write", "--stdin-file-path", "$FILENAME" },
+          stdin = true,
+          cwd = require("conform.util").root_file({ "biome.json", "biome.config.js", "biome.config.ts" }),
+          require_cwd = true,
+        }
+      },
+      formatters_by_ft = {
+        javascript = { "biome", "eslint_d" },
+        typescript = { "biome", "eslint_d" },
       },
     }
+
     return opts
   end,
 }
