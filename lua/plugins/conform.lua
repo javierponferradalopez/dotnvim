@@ -48,11 +48,23 @@ return {
           stdin = true,
           cwd = require("conform.util").root_file({ "biome.json", "biome.config.js", "biome.config.ts" }),
           require_cwd = true,
+        },
+        prettier = {
+          cwd = require("conform.util").root_file({ ".prettierrc", ".prettierrc.json", ".prettierrc.js",
+            ".prettierrc.mjs", ".prettierrc.cjs",
+            "prettier.config.js", "prettier.config.cjs", "prettier.config.mjs" }),
+          require_cwd = true,
+        },
+        eslint_d = {
+          cwd = require("conform.util").root_file({ ".eslintrc.js", ".eslintrc.mjs", ".eslintrc.cjs", ".eslintrc.json",
+            "eslint.config.js", "eslint.config.mjs", "eslint.config.cjs", "eslint.config.ts"
+          }),
+          require_cwd = true,
         }
       },
       formatters_by_ft = {
-        javascript = { "biome", "eslint_d" },
-        typescript = { "biome", "eslint_d" },
+        javascript = { "prettier", "eslint_d", "biome" },
+        typescript = { "prettier", "eslint_d", "biome" },
       },
     }
 
