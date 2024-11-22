@@ -10,11 +10,30 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim",                             import = "lazyvim.plugins" },
+    { "LazyVim/LazyVim",                                    import = "lazyvim.plugins" },
+
+    -- UI
     { import = "lazyvim.plugins.extras.ui.alpha" },
+
+    -- Copilot
     { import = "lazyvim.plugins.extras.ai.copilot" },
+
+    -- Managing Projects
     { import = "lazyvim.plugins.extras.util.project" },
-    -- { import = "lazyvim.plugins.extras.test.core" },
+
+    -- Linters
+    { import = "lazyvim.plugins.extras.linting.eslint" },
+
+    -- Formatters
+    { import = "lazyvim.plugins.extras.formatting.prettier" },
+    { import = "lazyvim.plugins.extras.formatting.biome" },
+
+    -- Language servers
+    { import = "lazyvim.plugins.extras.lang.typescript" },
+    { import = "lazyvim.plugins.extras.lang.json" },
+    { import = "lazyvim.plugins.extras.lang.markdown" },
+
+    -- Custom plugins
     { import = "plugins" },
   },
   defaults = {
