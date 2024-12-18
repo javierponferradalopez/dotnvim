@@ -1,6 +1,6 @@
 local opt = vim.opt -- for conciseness
 -- swaping
 
-opt.swapfile = false -- disble swap files
+opt.swapfile = false       -- disble swap files
 opt.relativenumber = false -- Relative line numbers
-opt.scrolloff = 30
+opt.scrolloff = 9999

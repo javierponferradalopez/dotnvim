@@ -22,4 +22,11 @@ map(
 )
 
 -- open a terminal
-map("n", "<leader>t", ":term<CR>", { desc = "Open a new terminal" })
+map("n", "<leader>t", ":vsplit | term<CR>", { desc = "Open a new terminal" })
+
+-- unfocus terminal
+map("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true, desc = "Exit terminal mode" })
+
+-- jump multiple lines
+map("n", "D", "<c-d>", { silent = true })
+map("n", "U", "<c-u>", { silent = true })
