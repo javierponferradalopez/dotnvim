@@ -11,11 +11,11 @@ return {
 
     -- change keymaps
     -- CWR
-    { "<leader>sw",      "<cmd>Telescope live_grep<cr>",  desc = "Find with Grep (cwr)" },
-    { "<leader>sf",      "<cmd>Telescope find_files<cr>", desc = "Find files (cwr)" },
+    { "<leader>sw",      "<cmd>Telescope live_grep<cr>",  desc = "Find with Grep" },
+    { "<leader>sf",      "<cmd>Telescope find_files<cr>", desc = "Find files" },
 
     -- ROOT DIR
-    { "<leader>sF",      "<cmd>Telescope git_files<cr>",  desc = "Find files (Root dir)" },
+    { "<leader>sF",      "<cmd>Telescope git_files<cr>",  desc = "Find files (Workspace)" },
   },
   config = function(opts)
     require("telescope").setup({
