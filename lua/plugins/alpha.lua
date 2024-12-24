@@ -52,7 +52,7 @@ return {
 
     opts.section.buttons.val = {
       opts.button("n", "  New file", ":ene <BAR> startinsert <CR>"),
-      opts.button("p", "  Projects", ":Telescope projects <CR>"),
+      opts.button("p", "  Projects", ":Telescope projects<CR>"),
       opts.button("t", "  Terminal", ":lua open_terminal_in_project()<CR>"), -- Terminal in Project
       opts.button("c", "  Config", ":e $MYVIMRC <CR>"),
       opts.button("q", "  Quit", ":qa<CR>"),

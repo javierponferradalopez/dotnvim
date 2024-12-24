@@ -28,6 +28,5 @@ return {
         scroll_strategy = "cycle",
       },
     })
-    require("telescope").load_extension("file_browser")
   end,
 }
