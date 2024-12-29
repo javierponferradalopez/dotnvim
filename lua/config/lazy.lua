@@ -21,9 +21,6 @@ require("lazy").setup({
     -- Telescope instead of fzf-lua
     { import = "lazyvim.plugins.extras.editor.telescope" },
 
-    -- Nvim-cmp instead of blink
-    { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
-
     -- Managing Projects
     { import = "lazyvim.plugins.extras.util.project" },
 
@@ -47,7 +44,7 @@ require("lazy").setup({
     -- If you know what you're doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.
     lazy = false,
     -- This strategy will ensure that we do not break anything
-    version = "d0c366e",
+    version = false,
   },
   install = {},
   checker = { enabled = false }, -- automatically check for plugin updates
