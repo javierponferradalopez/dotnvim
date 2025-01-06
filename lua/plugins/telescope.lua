@@ -16,6 +16,9 @@ return {
 
     -- ROOT DIR
     { "<leader>sF",      "<cmd>Telescope git_files<cr>",  desc = "Find files (Workspace)" },
+
+    -- Show projects
+    { "<leader>fp",      "<cmd>Telescope projects<cr>",   desc = "Show projects" },
   },
   config = function(opts)
     require("telescope").setup({
