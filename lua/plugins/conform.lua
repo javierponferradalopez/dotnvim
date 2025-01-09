@@ -3,16 +3,6 @@ return {
   dependencies = { "mason.nvim" },
   lazy = true,
   cmd = "ConformInfo",
-  keys = {
-    {
-      "<leader>cF",
-      function()
-        require("conform").format({ stop_after_first = true, timeout_ms = 3000 })
-      end,
-      mode = { "n", "v" },
-      desc = "Format Injected Langs",
-    },
-  },
   init = function()
     LazyVim.on_very_lazy(function()
       LazyVim.format.register({
@@ -35,10 +25,8 @@ return {
     ---@type conform.setupOpts
     local opts = {
       default_format_opts = {
-        timeout_ms = 3000,
         async = false,
         quiet = false,
-        lsp_format = "fallback",
         stop_after_first = true,
       },
       formatters = {
@@ -46,25 +34,15 @@ return {
           command = "biome",
           args = { "check", "--write", "--stdin-file-path", "$FILENAME" },
           stdin = true,
-          cwd = require("conform.util").root_file({ "biome.json", "biome.config.js", "biome.config.ts" }),
           require_cwd = true,
         },
-        prettier = {
-          cwd = require("conform.util").root_file({ ".prettierrc", ".prettierrc.json", ".prettierrc.js",
-            ".prettierrc.mjs", ".prettierrc.cjs",
-            "prettier.config.js", "prettier.config.cjs", "prettier.config.mjs" }),
+        prettierd = {
           require_cwd = true,
         },
-        eslint_d = {
-          cwd = require("conform.util").root_file({ ".eslintrc.js", ".eslintrc.mjs", ".eslintrc.cjs", ".eslintrc.json",
-            "eslint.config.js", "eslint.config.mjs", "eslint.config.cjs", "eslint.config.ts"
-          }),
-          require_cwd = true,
-        }
       },
       formatters_by_ft = {
-        javascript = { "prettier", "eslint_d", "biome" },
-        typescript = { "prettier", "eslint_d", "biome" },
+        javascript = { "prettierd", "biome" },
+        typescript = { "prettierd", "biome" },
       },
     }
 

@@ -16,22 +16,11 @@ require("lazy").setup({
     },
 
     -- UI
+    -- TODO: delete this
     { import = "lazyvim.plugins.extras.ui.alpha" },
 
     -- Copilot
     { import = "lazyvim.plugins.extras.ai.copilot" },
-
-    -- Linters
-    { import = "lazyvim.plugins.extras.linting.eslint" },
-
-    -- Formatters
-    { import = "lazyvim.plugins.extras.formatting.prettier" },
-    { import = "lazyvim.plugins.extras.formatting.biome" },
-
-    -- Language servers
-    { import = "lazyvim.plugins.extras.lang.typescript" },
-    { import = "lazyvim.plugins.extras.lang.json" },
-    { import = "lazyvim.plugins.extras.lang.markdown" },
 
     -- Custom plugins
     { import = "plugins" },
