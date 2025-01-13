@@ -7,7 +7,7 @@ return {
       --- JS ----
       "prettierd",         -- Formatter
       "biome",            -- Server & Formatter & Linter
-      "eslint-lsp",       -- Server
+      "eslint-lsp",       -- Server & Linter
       "vtsls",            -- Server
       "js-debug-adapter", -- DAP
 
